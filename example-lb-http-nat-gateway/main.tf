@@ -25,7 +25,7 @@ module "mig1" {
   name              = "group1"
   size              = 2
   access_config     = []
-  target_tags       = ["allow-group1","nat-west"]
+  target_tags       = ["allow-group1", "nat-west"]
   service_port      = 80
   service_port_name = "http"
   startup_script    = "${data.template_file.group1-startup-script.rendered}"
