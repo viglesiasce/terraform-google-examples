@@ -11,6 +11,8 @@ export GOOGLE_PROJECT=$(gcloud config get-value project)
 export TF_VAR_region=YOUR_REGION
 ```
 
+> See also: [Creating a Terraform Service Account](https://www.terraform.io/docs/providers/google/index.html#authentication-json-file).
+
 ## Run Terraform
 
 ```

@@ -12,6 +12,8 @@ export TF_VAR_region=YOUR_REGION
 export TF_VAR_backend_bucket="${GOOGLE_PROJECT}-static-assets"
 ```
 
+> See also: [Creating a Terraform Service Account](https://www.terraform.io/docs/providers/google/index.html#authentication-json-file).
+
 ## Generate SSL key and certificate:
 
 ```

@@ -11,6 +11,8 @@ export GOOGLE_PROJECT=$(gcloud config get-value project)
 export TF_VAR_backend_bucket="${GOOGLE_PROJECT}-static-assets"
 ```
 
+> See also: [Creating a Terraform Service Account](https://www.terraform.io/docs/providers/google/index.html#authentication-json-file).
+
 ## Manually create GKE cluster (without Terraform)
 
 In this example, we'll create a GKE cluster using the Cloud SDK and a Kubernetes `NodePort` service on port `30000` to route traffic to the [`example-app`](./k8s/example-app).

@@ -10,6 +10,8 @@ export GOOGLE_CREDENTIALS=$(cat ~/.config/gcloud/service_account.json)
 export GOOGLE_PROJECT=$(gcloud config get-value project)
 ```
 
+> See also: [Creating a Terraform Service Account](https://www.terraform.io/docs/providers/google/index.html#authentication-json-file).
+
 ## Run Terraform
 
 ```
