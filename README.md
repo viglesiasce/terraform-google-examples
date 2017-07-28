@@ -13,7 +13,7 @@ Modules used:
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
 
-## [`example-lb-http`](./example-lb-http)
+## [example-lb-http](./example-lb-http)
 
 **Figure 1.** *example-lb-http diagram*
 
@@ -24,7 +24,7 @@ Modules used:
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
-## [`example-lb-http-gke`](./example-lb-http-gke)
+## [example-lb-http-gke](./example-lb-http-gke)
 
 **Figure 1.** *example-lb-http-gke diagram*
 
@@ -45,7 +45,7 @@ Modules used:
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
-## [`example-lb-https-content`](./example-lb-https-content)
+## [example-lb-https-content](./example-lb-https-content)
 
 **Figure 1.** *example-lb-https-content diagram*
 
