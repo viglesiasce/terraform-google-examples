@@ -1,4 +1,4 @@
-# HTTP load balancer with existing GKE cluster example
+# HTTPS load balancer with existing GKE cluster example
 
 **Figure 1.** *diagram of Google Cloud resources*
 ![architecture diagram](./diagram.png)
@@ -52,6 +52,14 @@ gcloud compute instance-groups set-named-ports ${TF_VAR_backend} --named-ports=h
 ```
 
 > Backend Services use named ports to forward traffic and must be applied to the instance group.
+
+## Generate SSL key and certificate:
+
+```
+openssl genrsa -out example.key 2048
+openssl req -new -key example.key -out example.csr
+openssl x509 -req -days 365 -in example.csr -signkey example.key -out example.crt
+```
 
 ## Run Terraform
 
