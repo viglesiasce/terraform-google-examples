@@ -7,7 +7,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 **Figure 1.** *example-lb diagram*
 
-<img src="./example-lb/diagram.png" width="800px"></img>
+<img src="./example-lb/diagram.png" width="400px"></img>
 
 Modules used:
 
@@ -18,7 +18,7 @@ Modules used:
 
 **Figure 1.** *example-lb-http diagram*
 
-<img src="./example-lb-http/diagram.png" width="800px"></img>
+<img src="./example-lb-http/diagram.png" width="400px"></img>
 
 Modules used:
 
@@ -29,7 +29,7 @@ Modules used:
 
 **Figure 1.** *example-lb-https-gke diagram*
 
-<img src="./example-lb-http-gke/diagram.png" width="800px"></img>
+<img src="./example-lb-http-gke/diagram.png" width="400px"></img>
 
 Modules used:
 
@@ -39,7 +39,7 @@ Modules used:
 
 **Figure 1.** *example-lb-http-nat-gateway diagram*
 
-<img src="./example-lb-http-nat-gateway/diagram.png" width="800px"></img>
+<img src="./example-lb-http-nat-gateway/diagram.png" width="400px"></img>
 
 Modules used:
 
@@ -50,7 +50,7 @@ Modules used:
 
 **Figure 1.** *example-lb-https-content diagram*
 
-<img src="./example-lb-https-content/diagram.png" width="800px"></img>
+<img src="./example-lb-https-content/diagram.png" width="400px"></img>
 
 Modules used:
 
@@ -61,7 +61,7 @@ Modules used:
 
 **Figure 1.** *example-lb-internal diagram*
 
-<img src="./example-lb-internal/diagram.png" width="800px"></img>
+<img src="./example-lb-internal/diagram.png" width="400px"></img>
 
 Modules used:
 
