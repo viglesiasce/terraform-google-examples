@@ -1,6 +1,21 @@
-# Google Cloud Platform Terraform module examples
+Google Cloud Platform Terraform module examples
+=====
 
 Collection of examples for using Terraform with Google Cloud Platform.
+
+__Table of Contents__
+<!-- TOC -->
+
+- [[example-lb](./example-lb)](#example-lbexample-lb)
+- [[example-lb-http](./example-lb-http)](#example-lb-httpexample-lb-http)
+- [[example-lb-http-gke](./example-lb-http-gke)](#example-lb-http-gkeexample-lb-http-gke)
+- [[example-lb-http-nat-gateway](./example-lb-http-nat-gateway)](#example-lb-http-nat-gatewayexample-lb-http-nat-gateway)
+- [[example-lb-https-content](./example-lb-https-content)](#example-lb-https-contentexample-lb-https-content)
+- [[example-lb-internal](./example-lb-internal)](#example-lb-internalexample-lb-internal)
+
+<!-- /TOC -->
+
+-----
 
 ## [example-lb](./example-lb)
 
@@ -8,7 +23,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb/diagram.png" width="800px"></img>
 
-### Modules used:
+Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
@@ -19,7 +34,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb-http/diagram.png" width="800px"></img>
 
-### Modules used:
+Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
@@ -30,7 +45,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb-http-gke/diagram.png" width="800px"></img>
 
-### Modules used:
+Modules used:
 
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
@@ -40,7 +55,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb-http-nat-gateway/diagram.png" width="800px"></img>
 
-### Modules used:
+Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
@@ -51,7 +66,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb-https-content/diagram.png" width="800px"></img>
 
-### Modules used:
+Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
@@ -62,7 +77,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb-internal/diagram.png" width="800px"></img>
 
-### Modules used:
+Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
