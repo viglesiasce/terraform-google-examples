@@ -3,6 +3,15 @@ Google Cloud Platform Terraform module examples
 
 Collection of examples for using Terraform with Google Cloud Platform.
 
+__Table of Contents__
+
+1. [example-lb](#example-lb)
+1. [example-lb-http](#example-lb-http)
+1. [example-lb-https-gke](#example-lb-https-gke)
+1. [example-lb-http-nat-gateway](#example-lb-http-nat-gateway)
+1. [example-lb-https-content](#example-lb-https-content)
+1. [example-lb-internal](#example-lb-internal)
+
 ## [example-lb](./example-lb)
 
 **Figure 1.** *example-lb diagram*
