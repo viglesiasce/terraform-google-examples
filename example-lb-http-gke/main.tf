@@ -22,8 +22,11 @@ provider google {
 }
 
 module "gce-lb-http" {
-  source = "github.com/danisla/terraform-google-lb-http"
-  name   = "group-http-lb"
+  source        = "github.com/danisla/terraform-google-lb-http"
+  name          = "group-http-lb"
+  ssl           = true
+  private_key   = "${file("./example.key")}"
+  certificate   = "${file("./example.crt")}"
 
   // Make sure when you create the cluster that you provide the `--tags` argument to add the appropriate `target_tags` referenced in the http module. 
   target_tags = ["${var.target_tags}"]

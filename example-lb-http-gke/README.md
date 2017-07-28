@@ -20,12 +20,14 @@ In this example, we'll create a GKE cluster using the Cloud SDK and a Kubernetes
 Create the GKE cluster named `dev` in zone `us-central1-f` with additional tags `gke-dev` used for load balancing:
 
 ```
-gcloud container clusters create dev --num-nodes=3 --machine-type f1-micro --zone us-central1-f --tags gke-dev
+CLUSTER_NAME=dev
+
+gcloud container clusters create ${CLUSTER_NAME} --num-nodes=3 --machine-type f1-micro --zone us-central1-f --tags gke-${CLUSTER_NAME}
 ```
 
 > Remember to include the `--tags` argument so that the network rules apply.
 
-Deploy the example app:
+Deploy the example app that shows instance info with https redirection:
 
 ```
 kubectl create -f example-app/
@@ -34,13 +36,13 @@ kubectl create -f example-app/
 Find the URI of the instance groups for the GKE cluster, the groups created by GKE are prefixed with your cluster name:
 
 ```
-gcloud compute instance-groups list --uri
+INSTANCE_GROUP_URI=$(gcloud container clusters describe ${CLUSTER_NAME} --format 'value(instanceGroupUrls[0])' | sed 's/instanceGroupManagers/instanceGroups/')
 ```
 
 Export the instance group URI as a Terraform environment variable:
 
 ```
-export TF_VAR_backend=INSTANCE_GROUP_URI
+export TF_VAR_backend=${INSTANCE_GROUP_URI}
 ```
 
 Add a named port for the load balancer to the instance group:
@@ -76,8 +78,14 @@ You should see the Google Cloud logo (served from Cloud Storage) and instance de
 terraform destroy
 ```
 
+Delete the sample app:
+
+```
+kubectl delete -f sample-app
+```
+
 Delete the GKE cluster:
 
 ```
-gcloud container clusters delete dev
+gcloud container clusters delete ${CLUSTER_NAME}
 ```

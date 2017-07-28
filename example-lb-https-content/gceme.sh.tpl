@@ -16,6 +16,12 @@ function metadata_value($value) {
     $content = file_get_contents("http://metadata/computeMetadata/v1/$value", false, $context);
     return $content;
 }
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == "http") {
+		$redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		header('HTTP/1.1 301 Moved Permanently');
+		header('Location: ' . $redirect);
+		exit();
+}
 ?>
 
 <!doctype html>

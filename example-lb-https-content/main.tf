@@ -15,7 +15,6 @@ module "gce-lb-http" {
   url_map        = "${google_compute_url_map.my-url-map.self_link}"
   create_url_map = false
   ssl            = true
-  lb_port_range  = "443"
   private_key    = "${file("./example.key")}"
   certificate    = "${file("./example.crt")}"
 
