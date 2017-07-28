@@ -38,7 +38,7 @@ Modules used:
 
 **Figure 1.** *example-lb-https-gke diagram*
 
-<img src="./example-lb-http-gke/diagram.png" width="800px"></img>
+<img src="./example-lb-https-gke/diagram.png" width="800px"></img>
 
 Modules used:
 
