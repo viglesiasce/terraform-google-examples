@@ -1,6 +1,7 @@
 # HTTPS load balancer with existing GKE cluster example
 
 **Figure 1.** *diagram of Google Cloud resources*
+
 ![architecture diagram](./diagram.png)
 
 ## Setup Environment
