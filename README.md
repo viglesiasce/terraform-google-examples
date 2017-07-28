@@ -2,7 +2,7 @@
 
 Collection of examples for using Terraform with Google Cloud Platform.
 
-## [`example-lb`](./example-lb)
+## [example-lb](./example-lb)
 
 **Figure 1.** *example-lb diagram*
 
@@ -10,8 +10,8 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 Modules used:
 
-- [`terraform-google-managed-instance-group`](github.com/danisla/terraform-google-managed-instance-group)
-- [`terraform-google-lb`](github.com/danisla/terraform-google-lb)
+- [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
+- [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
 
 ## [`example-lb-http`](./example-lb-http)
 
@@ -21,8 +21,8 @@ Modules used:
 
 Modules used:
 
-- [`terraform-google-managed-instance-group`](github.com/danisla/terraform-google-managed-instance-group)
-- [`terraform-google-lb-http`](github.com/danisla/terraform-google-lb-http)
+- [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
+- [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
 ## [`example-lb-http-gke`](./example-lb-http-gke)
 
@@ -32,9 +32,9 @@ Modules used:
 
 Modules used:
 
-- [`terraform-google-lb-http`](github.com/danisla/terraform-google-lb-http)
+- [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
-## [`example-lb-http-nat-gateway`](./example-lb-http-nat-gateway)
+## [example-lb-http-nat-gateway](./example-lb-http-nat-gateway)
 
 **Figure 1.** *example-lb-http-nat-gateway diagram*
 
@@ -42,8 +42,8 @@ Modules used:
 
 Modules used:
 
-- [`terraform-google-managed-instance-group`](github.com/danisla/terraform-google-managed-instance-group)
-- [`terraform-google-lb-http`](github.com/danisla/terraform-google-lb-http)
+- [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
+- [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
 ## [`example-lb-https-content`](./example-lb-https-content)
 
@@ -53,10 +53,10 @@ Modules used:
 
 Modules used:
 
-- [`terraform-google-managed-instance-group`](github.com/danisla/terraform-google-managed-instance-group)
-- [`terraform-google-lb-http`](github.com/danisla/terraform-google-lb-http)
+- [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
+- [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
-## [`example-lb-internal`](./example-lb-internal)
+## [example-lb-internal](./example-lb-internal)
 
 **Figure 1.** *example-lb-internal diagram*
 
@@ -64,6 +64,6 @@ Modules used:
 
 Modules used:
 
-- [`terraform-google-managed-instance-group`](github.com/danisla/terraform-google-managed-instance-group)
-- [`terraform-google-lb`](github.com/danisla/terraform-google-lb)
-- [`terraform-google-lb-internal`](github.com/danisla/terraform-google-lb-internal)
+- [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
+- [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
+- [terraform-google-lb-internal](https://github.com/danisla/terraform-google-lb-internal)
