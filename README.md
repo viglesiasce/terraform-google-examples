@@ -8,7 +8,7 @@ Collection of examples for using Terraform with Google Cloud Platform.
 
 <img src="./example-lb/diagram.png" width="800px"></img>
 
-Modules used:
+### Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
@@ -19,7 +19,7 @@ Modules used:
 
 <img src="./example-lb-http/diagram.png" width="800px"></img>
 
-Modules used:
+### Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
@@ -30,7 +30,7 @@ Modules used:
 
 <img src="./example-lb-http-gke/diagram.png" width="800px"></img>
 
-Modules used:
+### Modules used:
 
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
@@ -40,7 +40,7 @@ Modules used:
 
 <img src="./example-lb-http-nat-gateway/diagram.png" width="800px"></img>
 
-Modules used:
+### Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
@@ -51,7 +51,7 @@ Modules used:
 
 <img src="./example-lb-https-content/diagram.png" width="800px"></img>
 
-Modules used:
+### Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
@@ -62,7 +62,7 @@ Modules used:
 
 <img src="./example-lb-internal/diagram.png" width="800px"></img>
 
-Modules used:
+### Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
