@@ -25,9 +25,9 @@ Modules used:
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
 
-## [example-lb-http-gke](./example-lb-http-gke)
+## [example-lb-https-gke](./example-lb-https-gke)
 
-**Figure 1.** *example-lb-http-gke diagram*
+**Figure 1.** *example-lb-https-gke diagram*
 
 <img src="./example-lb-http-gke/diagram.png" width="800px"></img>
 
