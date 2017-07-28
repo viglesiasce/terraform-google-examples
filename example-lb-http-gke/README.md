@@ -1,7 +1,7 @@
 # HTTP load balancer with existing GKE cluster example
 
 **Figure 1.** *diagram of Google Cloud resources*
-![architecture diagram](./http_lb_gke_gcs_diagram.png)
+![architecture diagram](./diagram.png)
 
 ## Setup Environment
 

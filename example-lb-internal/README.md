@@ -1,7 +1,7 @@
 # Internal Load Balancer Example
 
 **Figure 1.** *diagram of Google Cloud resources*
-![architecture diagram](./internal_lb_diagram.png)
+![architecture diagram](./diagram.png)
 
 ## Set up the environment
 

@@ -1,7 +1,7 @@
 # HTTP Load Balancer Example
 
 **Figure 1.** *diagram of Google Cloud resources*
-![architecture diagram](./http_lb_diagram.png)
+![architecture diagram](./diagram.png)
 
 ## Setup Environment
 

@@ -1,7 +1,7 @@
 # Global HTTP Example to GCE instances with NAT Gateway
 
 **Figure 1.** *diagram of Google Cloud resources*
-![architecture diagram](./lb_http_nat_gateway.png)
+![architecture diagram](./diagram.png)
 
 ## Setup Environment
 
