@@ -11,6 +11,7 @@ __Table of Contents__
 1. [example-lb-http-nat-gateway](#example-lb-http-nat-gateway)
 1. [example-lb-https-content](#example-lb-https-content)
 1. [example-lb-internal](#example-lb-internal)
+1. [example-k8s-gce](#example-k8s-gce)
 
 ## [example-lb](./example-lb)
 
@@ -77,3 +78,14 @@ Modules used:
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb](https://github.com/danisla/terraform-google-lb)
 - [terraform-google-lb-internal](https://github.com/danisla/terraform-google-lb-internal)
+
+## [example-k8s-gce](./example-k8s-gce)
+
+**Figure 1.** *example-k8s-gce diagram*
+
+<img src="./example-k8s-gce/diagram.png" width="800px"></img>
+
+Modules used:
+
+- [terraform-google-k8s-gce](https://github.com/danisla/terraform-google-k8s-gce)
+- [terraform-google-nat-gateway](https://github.com/danisla/terraform-google-nat-gateway)
