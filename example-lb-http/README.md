@@ -4,20 +4,17 @@
 
 ![architecture diagram](./diagram.png)
 
-## Setup Environment
+## Set up the environment
 
 ```
-export GOOGLE_CREDENTIALS=$(cat ~/.config/gcloud/service_account.json)
+gcloud auth application-default login
 export GOOGLE_PROJECT=$(gcloud config get-value project)
-export TF_VAR_region=YOUR_REGION
 ```
-
-> See also: [Creating a Terraform Service Account](https://www.terraform.io/docs/providers/google/index.html#authentication-json-file).
 
 ## Run Terraform
 
 ```
-terraform get
+terraform init
 terraform plan
 terraform apply
 ```
