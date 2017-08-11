@@ -18,23 +18,35 @@ variable cluster_name {
   default = "dev"
 }
 
+variable k8s_version {
+  default = "1.7.4"
+}
+
+variable pod_network_type {
+  default = "kubenet"
+}
+
 module "k8s" {
-  source        = "github.com/danisla/terraform-google-k8s-gce"
-  name          = "${var.cluster_name}"
-  network       = "default"
-  region        = "${var.region}"
-  zone          = "${var.zone}"
-  k8s_version   = "1.7.3"
-  access_config = []
-  add_tags      = ["nat-us-central1"]
-  num_nodes     = "${var.num_nodes}"
-  depends_id    = "${join(",", list(module.nat.depends_id, null_resource.route_cleanup.id))}"
+  source           = "github.com/danisla/terraform-google-k8s-gce"
+  name             = "${var.cluster_name}"
+  network          = "big-ent"
+  subnetwork       = "big-ent"
+  region           = "${var.region}"
+  zone             = "${var.zone}"
+  k8s_version      = "${var.k8s_version}"
+  pod_network_type = "${var.pod_network_type}"
+  access_config    = []
+  add_tags         = ["nat-us-central1"]
+  num_nodes        = "${var.num_nodes}"
+  depends_id       = "${join(",", list(module.nat.depends_id, null_resource.route_cleanup.id))}"
 }
 
 module "nat" {
-  source  = "github.com/danisla/terraform-google-nat-gateway"
-  region  = "us-central1"
-  network = "default"
+  source     = "github.com/danisla/terraform-google-nat-gateway"
+  region     = "us-central1"
+  zone       = "${var.zone}"
+  network    = "big-ent"
+  subnetwork = "big-ent"
 }
 
 resource "null_resource" "route_cleanup" {

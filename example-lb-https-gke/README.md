@@ -4,15 +4,13 @@
 
 ![architecture diagram](./diagram.png)
 
-## Setup Environment
+## Set up the environment
 
 ```
-export GOOGLE_CREDENTIALS=$(cat ~/.config/gcloud/service_account.json)
+gcloud auth application-default login
 export GOOGLE_PROJECT=$(gcloud config get-value project)
 export TF_VAR_backend_bucket="${GOOGLE_PROJECT}-static-assets"
 ```
-
-> See also: [Creating a Terraform Service Account](https://www.terraform.io/docs/providers/google/index.html#authentication-json-file).
 
 ## Manually create GKE cluster (without Terraform)
 
@@ -65,7 +63,7 @@ openssl x509 -req -days 365 -in example.csr -signkey example.key -out example.cr
 ## Run Terraform
 
 ```
-terraform get
+terraform init
 terraform plan
 terraform apply
 ```
