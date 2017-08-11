@@ -7,7 +7,7 @@
 ## Set up the environment
 
 ```
-gcloud auth get-default-application-credentials
+gcloud auth application-default login
 export GOOGLE_PROJECT=$(gcloud config get-value project)
 ```
 
@@ -39,6 +39,26 @@ Wait for all nodes to join and become Ready:
 
 ```
 kubectl get nodes -o wide
+```
+
+## Run Example App with HTTP LoadBalancer
+
+```
+kubectl run nginx --image nginx --port 80
+kubectl expose deployment nginx --port 80 --type=NodePort
+```
+
+```
+kubectl create -f - <<'EOF'
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: basic-ingress
+spec:
+  backend:
+    serviceName: nginx
+    servicePort: 80
+EOF
 ```
 
 ## Cleanup
