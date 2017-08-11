@@ -19,8 +19,7 @@ variable cluster_name {
 }
 
 module "k8s" {
-  // source        = "github.com/danisla/terraform-google-k8s-gce"
-  source = "/Users/disla/Projects/terraform-google-modules/terraform-google-k8s-gce"
+  source        = "github.com/danisla/terraform-google-k8s-gce"
   name          = "${var.cluster_name}"
   network       = "default"
   region        = "${var.region}"
