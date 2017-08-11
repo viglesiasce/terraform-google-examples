@@ -67,6 +67,39 @@ Wait a few minutes for the HTTP load balancer to be provisioned then curl the ex
 curl http://$(kubectl get ing basic-ingress -o jsonpath='{.status.loadBalancer.ingress..ip}')
 ```
 
+## Open Kubernetes Dashboard
+
+Copy the cluster credentials to your local host:
+
+```
+gcloud compute ssh --ssh-flag="-A" \
+  $(gcloud compute instances list --filter=nat-gateway-us-central --uri) \
+  -- ssh $(gcloud compute instances list --filter='name~k8s-.*master.*' --format='get(name)') \
+    sudo cat /etc/kubernetes/admin.conf | \
+    sed "s/$(terraform output -module k8s |grep master_ip | cut -d= -f2 | tr -d ' ')/127.0.0.1/g" \
+    > ${HOME}/.kube/config
+```
+
+Create port-forward to apiserver:
+
+```
+gcloud compute ssh --ssh-flag="-A -N -v" \
+  $(gcloud compute instances list --filter=nat-gateway-us-central --uri) \
+  -- "-L 6443:$(gcloud compute instances list --filter='name~k8s-.*master.*' --format='get(name)'):6443"
+```
+
+Start kube proxy
+
+```
+kubectl proxy
+```
+
+Open dashboard:
+
+```
+open http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy
+```
+
 ## Cleanup
 
 Remove the ingress resource to delete the load balancer which is not cleaned up by Terraform.
