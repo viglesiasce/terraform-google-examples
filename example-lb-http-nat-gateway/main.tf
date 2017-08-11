@@ -14,10 +14,6 @@ data "template_file" "group1-startup-script" {
   }
 }
 
-data "template_file" "nat-west-startup-script" {
-  template = "${file("${format("%s/../scripts/nat_gateway.sh.tpl", path.module)}")}"
-}
-
 module "mig1" {
   source            = "github.com/danisla/terraform-google-managed-instance-group"
   region            = "us-west1"
@@ -25,34 +21,17 @@ module "mig1" {
   name              = "group1"
   size              = 2
   access_config     = []
-  target_tags       = ["allow-group1", "nat-west"]
+  target_tags       = ["allow-group1", "nat-us-west1"]
   service_port      = 80
   service_port_name = "http"
   startup_script    = "${data.template_file.group1-startup-script.rendered}"
-  depends_id        = "${module.nat-west.depends_id}"
+  depends_id        = "${module.nat.depends_id}"
 }
 
-module "nat-west" {
-  source            = "github.com/danisla/terraform-google-managed-instance-group"
-  region            = "us-west1"
-  zone              = "us-west1-b"
-  name              = "nat-gateway-west"
-  size              = 1
-  network_ip        = "10.138.1.1"
-  can_ip_forward    = "true"
-  service_port      = "8080"
-  service_port_name = "http"
-  startup_script    = "${data.template_file.nat-west-startup-script.rendered}"
-}
-
-resource "google_compute_route" "nat-west" {
-  name        = "nat-west"
-  dest_range  = "0.0.0.0/0"
-  network     = "default"
-  next_hop_ip = "10.138.1.1"
-  tags        = ["nat-west"]
-  priority    = 800
-  depends_on  = ["module.nat-west"]
+module "nat" {
+  source  = "github.com/danisla/terraform-google-nat-gateway"
+  region  = "us-west1"
+  network = "default"
 }
 
 module "gce-lb-http" {

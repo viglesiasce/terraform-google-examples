@@ -55,6 +55,7 @@ Modules used:
 
 - [terraform-google-managed-instance-group](https://github.com/danisla/terraform-google-managed-instance-group)
 - [terraform-google-lb-http](https://github.com/danisla/terraform-google-lb-http)
+- [terraform-google-nat-gateway](https://github.com/danisla/terraform-google-nat-gateway)
 
 ## [example-lb-https-content](./example-lb-https-content)
 
