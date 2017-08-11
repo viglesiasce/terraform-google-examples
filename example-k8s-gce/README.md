@@ -61,7 +61,19 @@ spec:
 EOF
 ```
 
+Wait a few minutes for the HTTP load balancer to be provisioned then curl the external IP.
+
+```
+curl http://$(kubectl get ing basic-ingress -o jsonpath='{.status.loadBalancer.ingress..ip}')
+```
+
 ## Cleanup
+
+Remove the ingress resource to delete the load balancer which is not cleaned up by Terraform.
+
+```
+kubectl delete ing basic-ingress
+```
 
 Remove all resources created by terraform:
 
